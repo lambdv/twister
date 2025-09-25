@@ -1,0 +1,6 @@
+@twister.Server_HostAddress = http://localhost:5075
+
+GET {{twister.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

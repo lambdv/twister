@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:7901",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Lokesh\\source\\repos\\twister\\twister.Server\\..\\twister.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
