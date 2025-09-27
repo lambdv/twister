@@ -1,16 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using twister.Server.Models;
 
-namespace twister.Server.Data
-{
-    public class ApplicationDbContext : DbContext
-    {
+namespace twister.Server.Data{
+    public class ApplicationDbContext : DbContext{
         public DbSet<Post> Posts { get; set; }
-
-        public ApplicationDbContext(DbContextOptions options) : base(options)
-        {
-            
-        }
-
+        public DbSet<User> Users { get; set; }
+        public ApplicationDbContext(DbContextOptions options) : base(options){}
     }
 }

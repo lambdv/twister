@@ -1,0 +1,26 @@
+# IDE
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET build artifacts
+[Bb]in/
+[Oo]bj/
+*.pdb
+*.cache
+
+# Logs
+*.log
+
+# Node / frontend
+node_modules/
+dist/
+build/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+

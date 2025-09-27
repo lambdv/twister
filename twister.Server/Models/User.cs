@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace twister.Server.Models;
 
-public class Post
-{
-    [Key] public int PostId { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
 
-    public string? Title { get; set; } = string.Empty;
-    public string Content { get; set; } = string.Empty;
+public class User
+{
+    [Key]
+    public int UserId { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public string Username { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
 }
