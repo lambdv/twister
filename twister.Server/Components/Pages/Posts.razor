@@ -1,0 +1,43 @@
+@page "/posts"
+@using twister.Server.Dots
+@using twister.Server.Models
+@using twister.Server.Mappers
+@inject IPostRepository PostRepository
+
+<PageTitle>Posts</PageTitle>
+
+<h1>Posts</h1>
+
+@if (posts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="row">
+        @foreach (var post in posts)
+        {
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@post.Title</h5>
+                        <p class="card-text">@post.Content</p>
+                        <small class="text-muted">Posted on @post.CreatedAt.ToString("MMM dd, yyyy")</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<Post>? posts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var res = await PostRepository.GetAllAsync();
+        posts = res
+        .Where(x => x != null)
+        .ToList();
+    }
+}

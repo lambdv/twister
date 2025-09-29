@@ -5,13 +5,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace twister.Server.Models;
 
-public class Post
+public class Comment
 {
-    [Key] public int PostId { get; set; }
+    [Key] public int CommentId { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
-
-    public string? Title { get; set; } = string.Empty;
     public string Content { get; set; } = string.Empty;
-    public List<Comment> Comments { get; set; } = new List<Comment>();
+    // [ForeignKey]
+    public int PostId { get; set; }
 }

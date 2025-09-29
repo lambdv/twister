@@ -15,7 +15,8 @@ namespace twister.Server.Mappers
                 CreatedAt = postModel.CreatedAt,
                 UpdatedAt = postModel.UpdatedAt,
                 Title = postModel.Title,
-                Content = postModel.Content
+                Content = postModel.Content,
+                Comments = postModel.Comments.Select(x => x.ToDto()).ToList()
             };
         }
 
