@@ -5,9 +5,9 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     
-    <SpaRoot>..\twister.client</SpaRoot>
+    <!-- <SpaRoot>..\twister.client</SpaRoot>
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
-    <SpaProxyServerUrl>https://localhost:7901</SpaProxyServerUrl>
+    <SpaProxyServerUrl>https://localhost:7901</SpaProxyServerUrl> -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +25,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.9" />
+    <!-- <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.9" /> -->
     
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.*">
       <PrivateAssets>all</PrivateAssets>

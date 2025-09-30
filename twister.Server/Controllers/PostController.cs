@@ -6,6 +6,8 @@ using twister.Server.Data;
 using twister.Server.Mappers;
 using twister.Server.Dots;
 using twister.Server.Interfaces;
+using twister.Server.Helpers;
+
 namespace twister.Server.Controllers;
 
 [ApiController]
@@ -22,8 +24,12 @@ public class PostController : ControllerBase
     }
 
     [HttpGet("")]
-    public async Task<IActionResult> GetAll() //get request for /post
+    public async Task<IActionResult> GetAll(
+        // [FromQuery]
+        // QueryObject queryParameter
+    ) //get request for /post
     {
+        
         var posts = await _postRepo.GetAllAsync();
         var postsDto = posts.Select(x => x.ToDto());
         return Ok(posts);

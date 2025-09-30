@@ -20,7 +20,12 @@ public class PostRepository : IPostRepository
 
     public async Task<List<PostDto>> GetAllPostsAsync()
     {
-        var posts = await _context.Posts.Include(x => x.Comments).ToListAsync();
+        var posts = await _context.Posts
+            .Include(x => x.Comments)
+            .OrderByDecending(x => x.UpdatedAt)
+            .ToListAsync()
+
+        ;
         return posts.Select(p => p.ToDto()).ToList();
     }
 

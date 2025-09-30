@@ -11,6 +11,9 @@ public class CommentDto
 
 public class CreateCommentRequestDto
 {
+    [Required]
+    [MinLength(5, ErrorMessage="Comment must be more than 5 characters long")]
+    // [MaxLength()]
     public string Content { get; set; } = string.Empty;
 }
 
