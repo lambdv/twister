@@ -22,7 +22,7 @@ public class PostRepository : IPostRepository
     {
         var posts = await _context.Posts
             .Include(x => x.Comments)
-            .OrderByDecending(x => x.UpdatedAt)
+            .OrderByDescending(x => x.UpdatedAt)
             .ToListAsync()
 
         ;

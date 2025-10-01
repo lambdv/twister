@@ -1,5 +1,4 @@
-﻿namespace twister.Server.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using twister.Server.Models;
 
 namespace twister.Server.Data;

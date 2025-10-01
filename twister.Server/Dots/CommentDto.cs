@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace twister.Server.Dots;
 
 public class CommentDto
